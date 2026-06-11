@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой Minecraft сервер</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #0a2f1f;
+            color: white;
+            padding: 50px;
+        }
+        .ip {
+            font-size: 32px;
+            background: #1e3a2a;
+            padding: 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        button {
+            background: #44aa00;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌿 Мой Ванильный Сервер</h1>
+    <p>Java Edition | Честное выживание без приватов</p>
+    
+    <div class="ip">
+        play.smproma2890.me
+    </div>
+    <br>
+    <button onclick="copyIP()">📋 Копировать IP</button>
+    <br><br>
+    <button onclick="addServer()">➕ Добавить сервер в Minecraft</button>
+
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("play.smproma2890.me");
+            alert("IP скопирован!");
+        }
+        function addServer() {
+            window.location.href = "minecraft://?addExternalServer=MyServer|play.smproma2890.me:25565";
+            alert("Открывай Minecraft → Мультиплеер → Добавить сервер");
+        }
+    </script>
+</body>
+</html>
